@@ -1,0 +1,21 @@
+import cv2 as cv
+import numpy as np
+from PIL import Image,ImageEnhance
+from PIL import Image,ImageEnhance
+
+#img=Image.open('D:/Images/ImageRec/Copy of real_img (1).jpg')
+#img_contr_obj=ImageEnhance.Contrast(img)
+#factor=6
+#e_img=img_contr_obj.enhance(factor)
+#e_img.save('C:/Users/eball/Pictures/Saved Pictures/ImageRec/Copy of real_img (3).jpg')
+
+
+photo=cv.imread('C:/Users/eball/Pictures/Saved Pictures/ImageRec/AUVSI.png', 0)
+#morph1= cv.adaptiveThreshold(photo, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY, 5, 3);
+canny = cv.Canny(photo, 25, 50, )
+
+cv.imshow('Image', photo)
+#cv.imshow('Transformed', morph1)
+cv.imshow('Lines', canny)
+cv.waitKey(0)
+cv.destroyAllWindows()
