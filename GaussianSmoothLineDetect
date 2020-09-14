@@ -1,0 +1,16 @@
+import cv2 as cv
+import numpy as np
+from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance
+
+
+photo = cv.imread('C:/Users/eball/Pictures/Saved Pictures/ImageRec/AUVSI.png', 0)
+dst = cv.GaussianBlur(photo, (5, 5), cv.BORDER_DEFAULT)
+
+cv.imshow("Gaussian Smoothing", dst)
+canny = cv.Canny(dst, 25, 50, )
+
+cv.imshow('Image', photo)
+cv.imshow('Lines', canny)
+cv.imwrite('C:/Users/eball/Pictures/Saved Pictures/ImageRec/GuassianLine.png', canny)
+cv.destroyAllWindows()
