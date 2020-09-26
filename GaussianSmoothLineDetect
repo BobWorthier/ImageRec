@@ -12,5 +12,6 @@ canny = cv.Canny(dst, 25, 50, )
 
 cv.imshow('Image', photo)
 cv.imshow('Lines', canny)
-cv.imwrite('C:/Users/eball/Pictures/Saved Pictures/ImageRec/GuassianLine.png', canny)
+#cv.imwrite('C:/Users/eball/Pictures/Saved Pictures/ImageRec/GuassianLine.png', canny)
+cv.waitKey(0)
 cv.destroyAllWindows()
